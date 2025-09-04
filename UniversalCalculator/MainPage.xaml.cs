@@ -90,5 +90,10 @@ namespace Calculator
 				Utils.Utils.handleBackspace();
 			}
 		}
+
+		private void BackToMenuClick(object sender, RoutedEventArgs e)
+		{
+			Frame.Navigate(typeof(MainMenu));
+		}
 	}
 }
