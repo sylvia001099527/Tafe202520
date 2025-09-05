@@ -1,0 +1,114 @@
+﻿<Page
+    x:Class="Calculator.CurrencyCalc"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Calculator"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="5*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="5*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="5*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="Currency Conversion Calculator" VerticalAlignment="Center" FontSize="50" Grid.ColumnSpan="7" FontWeight="Bold" FontFamily="Times New Roman" Grid.Column="0"/>
+
+        <TextBlock HorizontalAlignment="Left" Grid.Row="1" TextWrapping="Wrap" Text="Amount $" VerticalAlignment="Bottom" FontFamily="Times New Roman" FontSize="20" Grid.Column="1"/>
+        <TextBlock HorizontalAlignment="Left" Grid.Row="1" TextWrapping="Wrap" Text="To" VerticalAlignment="Bottom" FontFamily="Times New Roman" FontSize="20" Grid.Column="5"/>
+        <TextBlock HorizontalAlignment="Left" Grid.Row="1" TextWrapping="Wrap" Text="From" VerticalAlignment="Bottom" FontFamily="Times New Roman" FontSize="20" Grid.Column="3"/>
+
+        <TextBox x:Name="inputDollar" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Bottom" PlaceholderText="Enter Dollar Amount" FontFamily="Times New Roman" FontSize="25" Grid.Column="1" HorizontalAlignment="Stretch"/>
+        <TextBox x:Name="convertedDollar" Grid.Row="4" TextWrapping="Wrap" VerticalAlignment="Bottom" FontFamily="Times New Roman" FontSize="25" Grid.Column="1" HorizontalAlignment="Stretch"/>
+        <TextBox x:Name="dollarAmount" Grid.Row="3" TextWrapping="Wrap" VerticalAlignment="Bottom" FontFamily="Times New Roman" FontSize="25" Grid.Column="1" HorizontalAlignment="Stretch" TextChanged="TextBox_TextChanged"/>
+        <TextBox x:Name="fromToAmount" Grid.Row="5" TextWrapping="Wrap" VerticalAlignment="Bottom" FontFamily="Times New Roman" FontSize="25" Grid.Column="1" HorizontalAlignment="Stretch"/>
+        <TextBox x:Name="toFromAmount" Grid.Row="6" TextWrapping="Wrap" VerticalAlignment="Bottom" FontFamily="Times New Roman" FontSize="25" Grid.Column="1" HorizontalAlignment="Stretch"/>
+        <Button Content="Button"/>
+
+        <Button x:Name="calculateButton" Grid.Column="3" Content="Calculate Currency" Grid.Row="7" HorizontalAlignment="Stretch"/>
+
+        <Button x:Name="exitButton" Grid.Column="3" Content="Exit" Grid.Row="8" HorizontalAlignment="Stretch" VerticalAlignment="Top"/>
+
+        <ComboBox x:Name="CurrencyFrom" Grid.Column="3" HorizontalAlignment="Stretch" Grid.Row="2" VerticalAlignment="Bottom">
+
+			<ComboBoxItem x:Name="fromUsd">
+				<StackPanel Orientation="Horizontal">
+					<TextBlock Text="USD - US Dollar"/>
+					<Image Source="/Assets/USA1.PNG" Width="24" Height="24"/>
+				</StackPanel>						
+			</ComboBoxItem>
+
+			<ComboBoxItem x:Name="fromEur">
+				<StackPanel Orientation="Horizontal">
+					<TextBlock Text="EUR - Euro"/>
+					<Image Source="/Assets/EUR1.PNG" Width="24" Height="24"/>
+				</StackPanel>
+			</ComboBoxItem>
+
+			<ComboBoxItem x:Name="fromGbp">
+				<StackPanel Orientation="Horizontal">
+					<TextBlock Text="GBP - British Pound"/>
+					<Image Source="/Assets/UK1.PNG" Width="24" Height="24"/>
+				</StackPanel>
+			</ComboBoxItem>
+
+			<ComboBoxItem x:Name="fromInr">
+				<StackPanel Orientation="Horizontal">
+					<TextBlock Text="INR - Indian Rupee"/>
+					<Image Source="/Assets/INDIA.PNG" Width="24" Height="24"/>
+				</StackPanel>
+			</ComboBoxItem>
+		</ComboBox>
+
+        <ComboBox x:Name="CurrencyTo" Grid.Column="5" HorizontalAlignment="Stretch" Grid.Row="2" VerticalAlignment="Bottom">
+
+			<ComboBoxItem x:Name="toUsd">
+				<StackPanel Orientation="Horizontal">
+					<TextBlock Text="USD - US Dollar"/>
+					<Image Source="/Assets/USA1.PNG" Width="24" Height="24"/>
+				</StackPanel>
+			</ComboBoxItem>
+
+			<ComboBoxItem x:Name="toEur">
+				<StackPanel Orientation="Horizontal">
+					<TextBlock Text="EUR - Euro"/>
+					<Image Source="/Assets/EUR1.PNG" Width="24" Height="24"/>
+				</StackPanel>
+			</ComboBoxItem>
+
+			<ComboBoxItem x:Name="toGbp">
+				<StackPanel Orientation="Horizontal">
+					<TextBlock Text="GBP - British Pound"/>
+					<Image Source="/Assets/UK1.PNG" Width="24" Height="24"/>
+				</StackPanel>
+			</ComboBoxItem>
+
+			<ComboBoxItem x:Name="toInr">
+				<StackPanel Orientation="Horizontal">
+					<TextBlock Text="INR - Indian Rupee"/>
+					<Image Source="/Assets/INDIA.PNG" Width="24" Height="24"/>
+				</StackPanel>
+			</ComboBoxItem>
+		</ComboBox>
+
+
+    </Grid>
+</Page>

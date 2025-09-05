@@ -17,24 +17,15 @@ using Windows.UI.Xaml.Navigation;
 
 namespace Calculator
 {
-	/// <summary>
-	/// An empty page that can be used on its own or navigated to within a Frame.
-	/// </summary>
-	public sealed partial class MainMenu : Page
-	{
-		public MainMenu()
-		{
-			this.InitializeComponent();
-		}
+    /// <summary>
+    /// An empty page that can be used on its own or navigated to within a Frame.
+    /// </summary>
+    public sealed partial class CurrencyCalc : Page
+    {
+        public CurrencyCalc()
+        {
+            this.InitializeComponent();
+        }
 
-		private void MathCalculator_Click(object sender, RoutedEventArgs e)
-		{
-			Frame.Navigate(typeof(MainPage));
-		}
-
-		private void CurrencyCalculator_Click(object sender, RoutedEventArgs e)
-		{
-			Frame.Navigate(typeof(CurrencyCalc));
-		}
     }
 }
