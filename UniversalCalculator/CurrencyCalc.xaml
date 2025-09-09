@@ -54,7 +54,7 @@
 
         <Button x:Name="calculateButton" Grid.Column="3" Content="Calculate Currency" Grid.Row="7" HorizontalAlignment="Stretch" FontFamily="Times New Roman" FontSize="25" Background="#FFBEE3DB" Click="calculateButton_Click"/>
 
-        <Button x:Name="exitButton" Grid.Column="3" Content="Exit" Grid.Row="8" HorizontalAlignment="Stretch" VerticalAlignment="Top" FontFamily="Times New Roman" FontSize="25" Background="#FFBEE3DB"/>
+        <Button x:Name="exitButton" Grid.Column="3" Content="Exit" Grid.Row="8" HorizontalAlignment="Stretch" VerticalAlignment="Top" FontFamily="Times New Roman" FontSize="25" Background="#FFBEE3DB" Click="exitButton_Click"/>
 
         <ComboBox x:Name="CurrencyFrom" Grid.Column="3" HorizontalAlignment="Stretch" Grid.Row="2" VerticalAlignment="Bottom" FontFamily="Times New Roman" FontSize="25" Margin="10,0,10,10" >
 
