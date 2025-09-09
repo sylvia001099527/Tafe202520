@@ -33,6 +33,9 @@ namespace Calculator
             this.InitializeComponent();
         }
 
+		/// <summary>
+		/// Static dictionary for currency conversion rates
+		/// </summary>
 		private static readonly Dictionary<string, Dictionary<string, double>> rates = new Dictionary<string, Dictionary<string, double>>
 		{
 			["USD"] = new Dictionary<string, double>
@@ -65,7 +68,14 @@ namespace Calculator
 			}
 		};
 
-		public(double convertedAmount, double forwardRate, double inverseRate) GetConversionRates(double amount, string fromCurrency, string toCurrency)
+		/// <summary>
+		/// Calculates the converted currency amount, the forward rate, and the inverse rate
+		/// </summary>
+		/// <param name="amount"></param>
+		/// <param name="fromCurrency"></param>
+		/// <param name="toCurrency"></param>
+		/// <returns></returns>
+		public (double convertedAmount, double forwardRate, double inverseRate) GetConversionRates(double amount, string fromCurrency, string toCurrency)
 		{
 			double forwardRate = rates[fromCurrency][toCurrency];
 			double inverseRate = rates[toCurrency][fromCurrency];
@@ -75,6 +85,11 @@ namespace Calculator
 			return (convertedAmount, forwardRate, inverseRate);
 		}
 
+		/// <summary>
+		/// Gets the currency symbol based on the currency code
+		/// </summary>
+		/// <param name="currencyCode"></param>
+		/// <returns></returns>
 		private string GetCurrencySymbol(string currencyCode)
 		{
 			switch (currencyCode)
@@ -92,6 +107,11 @@ namespace Calculator
 			}
 		}
 
+		/// <summary>
+		/// Gets the currency name based on the currency code
+		/// </summary>
+		/// <param name="currencyCode"></param>
+		/// <returns></returns>
 		private string GetCurrencyName(string currencyCode)
 		{
 			switch (currencyCode)
@@ -109,8 +129,14 @@ namespace Calculator
 			}
 		}
 
+		/// <summary>
+		/// Handles the click event for the calculate button
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
 		private async void calculateButton_Click(object sender, RoutedEventArgs e)
 		{
+			// Validate input
 			if (string.IsNullOrWhiteSpace(inputDollar.Text))
 			{
 				var dialogMessage = new MessageDialog("Error! Please enter a number.");
@@ -119,7 +145,7 @@ namespace Calculator
 				inputDollar.SelectAll();
 				return;
 			}
-
+			// Check if input is a valid number
 			if (!double.TryParse(inputDollar.Text, out double amount))
 			{
 				var dialogMessage = new MessageDialog("Error! Invalid number.");
@@ -129,13 +155,16 @@ namespace Calculator
 				return;
 			}
 
+			// Get selected currencies and their names
 			string fromCurrency = ((ComboBoxItem)CurrencyFrom.SelectedItem)?.Tag.ToString();
 			string toCurrency = ((ComboBoxItem)CurrencyTo.SelectedItem)?.Tag.ToString();
 			string fromName = GetCurrencyName(fromCurrency);
 			string toName = GetCurrencyName(toCurrency);
 
+			// Parse input amount, default to 0 if parsing fails
 			double inputAmount = double.TryParse(inputDollar.Text, out inputAmount) ? inputAmount : 0;
 
+			// Ensure both currencies are selected
 			if (fromCurrency == null || toCurrency == null)
 			{
 				var dialogMessage = new MessageDialog("Error! Please select both currencies.");
@@ -143,11 +172,14 @@ namespace Calculator
 				return;
 			}
 
+			// Get conversion rates and converted amount
 			var result = GetConversionRates(amount, fromCurrency, toCurrency);
 
+			// format dollarAmount and convertedDollar textboxes
 			dollarAmount.Text = GetCurrencySymbol(fromCurrency) + amount.ToString("N2") + (" ") + fromName;
 			convertedDollar.Text = GetCurrencySymbol(toCurrency) + result.convertedAmount.ToString("N2") + (" ") + toName;
 
+			// format toFrom textbox based on selected currency
 			switch (fromCurrency)
 			{
 				case "EUR":
@@ -166,6 +198,7 @@ namespace Calculator
 					break;
 			}
 
+			// format fromTo textbox based on selected currency
 			switch (toCurrency)
 			{
 				case "EUR":
@@ -185,6 +218,7 @@ namespace Calculator
 			}
 		}
 
+		// Handles the click event for the exit button
 		private void exitButton_Click(object sender, RoutedEventArgs e)
 		{
 			Frame.Navigate(typeof(MainMenu));
