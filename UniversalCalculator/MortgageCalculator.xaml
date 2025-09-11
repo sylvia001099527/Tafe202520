@@ -1,0 +1,73 @@
+﻿<Page
+    x:Class="Calculator.MortgageCalculator"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Calculator"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+	<Grid>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="1*" />
+			<ColumnDefinition Width="2.5*" />
+			<ColumnDefinition Width="1*" />
+		</Grid.ColumnDefinitions>
+
+		<!--background colour-->
+		<Grid.Background>
+			<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+				<GradientStop Color="#FF2F3E46" Offset="0.089"/>
+				<GradientStop Color="#FF89B0AE" Offset="0.623"/>
+				<GradientStop Color="#FFFFD6BA" Offset="1"/>
+			</LinearGradientBrush>
+		</Grid.Background>
+
+		<!--column left-->
+		<StackPanel Grid.Column="0" ></StackPanel>
+
+		<!--column middle, main menu-->
+		<StackPanel Grid.Column="1" Background="#bee3db" FocusVisualPrimaryBrush="#FFFFD6BA">
+			<StackPanel HorizontalAlignment="Center">
+				<TextBlock x:Name="headingTextBlock" Text="Mortgage Calculator" Margin="10,40,10,10" FontFamily="Times New Roman" FontSize="50" FontWeight="Bold" TextAlignment="Center"/>
+				<Grid VerticalAlignment="Center" HorizontalAlignment="Center">
+					<Grid.RowDefinitions>
+						<RowDefinition Height="Auto"/>
+						<RowDefinition Height="Auto"/>
+						<RowDefinition Height="Auto"/>
+						<RowDefinition Height="Auto"/>
+						<RowDefinition Height="Auto"/>
+						<RowDefinition Height="Auto"/>
+					</Grid.RowDefinitions>
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="Auto"/>
+						<ColumnDefinition Width="10"/>
+						<ColumnDefinition Width="300"/>
+					</Grid.ColumnDefinitions>
+					<TextBlock x:Name="principalTextBlock" Text="Principal borrowed: $" Grid.Row="0" Grid.Column="0" FontSize="30" Margin="5" TextAlignment="Right"/>
+					<TextBox x:Name="principalTextBox" Grid.Row="0" Grid.Column="2" Margin="5"/>
+					<TextBlock x:Name="yearsTextBlock" Text="Years:" Grid.Row="1" Grid.Column="0" FontSize="30" Margin="5" TextAlignment="Right"/>
+					<TextBox x:Name="yearsTextBox" Grid.Row="1" Grid.Column="2" Margin="5"/>
+					<TextBlock x:Name="monthsTextBlock" Text="Months:" Grid.Row="2" Grid.Column="0" FontSize="30" Margin="5" TextAlignment="Right"/>
+					<TextBox x:Name="monthsTextBox" Grid.Row="2" Grid.Column="2" Margin="5"/>
+					<TextBlock x:Name="annualInterestTextBlock" Text="Annual Interest Rate: %" Grid.Row="3" Grid.Column="0" FontSize="30" Margin="5" TextAlignment="Right"/>
+					<TextBox x:Name="annualInterestTextBox" Grid.Row="3" Grid.Column="2" Margin="5"/>
+					<TextBlock x:Name="monthlyInterestTextBlock" Text="Monthly Interest Rate: %" Grid.Row="4" Grid.Column="0" FontSize="30" Margin="5" TextAlignment="Right"/>
+					<TextBox x:Name="monthlyInterestTextBox" Grid.Row="4" Grid.Column="2" Margin="5" IsEnabled="False"/>
+					<TextBlock x:Name="repaymentTextBlock" Text="Monthly Repayment:" Grid.Row="5" Grid.Column="0" FontSize="30" Margin="5" TextAlignment="Right"/>
+					<TextBox x:Name="repaymentTextBox" Grid.Row="5" Grid.Column="2" Margin="5" IsEnabled="False"/>
+				</Grid>
+				<StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+					<Button x:Name="calculateButton" Margin="15" Background="#faf9f9" Content="Calculate" FontSize="35" FontFamily="Times New Roman" Click="calculateButton_Click"/>
+					<Button x:Name="exitButton" Margin="15" Background="#faf9f9" Content="Exit" FontSize="35" FontFamily="Times New Roman" Click="exitButton_Click"/>
+				</StackPanel>
+			</StackPanel>
+		</StackPanel>
+
+		<!--column right, image-->
+		<StackPanel Grid.Column="2">
+		</StackPanel>
+
+	</Grid>
+</Page>
