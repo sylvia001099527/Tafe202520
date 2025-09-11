@@ -31,5 +31,10 @@ namespace Calculator
 		{
 			Frame.Navigate(typeof(MainPage));
 		}
+
+		private void MortgageCalculator_Click(object sender, RoutedEventArgs e)
+		{
+			Frame.Navigate(typeof(MortgageCalculator));
+		}
 	}
 }
