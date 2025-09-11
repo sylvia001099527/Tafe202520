@@ -31,14 +31,15 @@ namespace Calculator
 		{
 			Frame.Navigate(typeof(MainPage));
 		}
-<<<<<<< HEAD
 
 		private void CurrencyCalculator_Click(object sender, RoutedEventArgs e)
 		{
 			Frame.Navigate(typeof(CurrencyCalc));
 		}
-    }
-=======
+
+		private void MortgageCalculator_Click(object sender, RoutedEventArgs e)
+		{
+			Frame.Navigate(typeof(MortgageCalculator));
+		}
 	}
->>>>>>> parent of 1303c4d (Added click event to main menu to MortgageCalculator)
 }
