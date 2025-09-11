@@ -37,12 +37,11 @@
                 </TextBlock.RenderTransform>
             </TextBlock>
             <Button x:Name="MathCalculator" Margin="10" Background="#faf9f9" Content="Math Calculator" FontSize="14" FontFamily="Times New Roman" Click="MathCalculator_Click" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+			
 			<Button x:Name="MortgageCalculator" Margin="10" Background="#faf9f9" Content="Mortgage Calculator" FontSize="14" FontFamily="Times New Roman" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="MortgageCalculator_Click"/>
-<<<<<<< HEAD
+			
 			<Button x:Name="CurrencyCalculator" Margin="10" Background="#faf9f9" Content="Currency Calculator" FontSize="14" FontFamily="Times New Roman" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="CurrencyCalculator_Click"/>
-=======
-			<Button x:Name="CurrencyCalculator" Margin="10" Background="#faf9f9" Content="Currency Calculator" FontSize="14" FontFamily="Times New Roman" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
->>>>>>> remotes/origin/feature_mortgage_calc
+
 			<Button x:Name="Exit" Margin="10" Background="#faf9f9" Content="Exit" FontSize="14" FontFamily="Times New Roman" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
 
         </StackPanel>

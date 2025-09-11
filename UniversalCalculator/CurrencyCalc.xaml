@@ -52,9 +52,9 @@
         <TextBox x:Name="fromToAmount" Grid.Row="5" TextWrapping="Wrap" VerticalAlignment="Bottom" FontFamily="Times New Roman" FontSize="25" Grid.Column="1" HorizontalAlignment="Stretch" Background="#FFFAF9F9" Margin="10,0,10,10"/>
         <TextBox x:Name="toFromAmount" Grid.Row="6" TextWrapping="Wrap" VerticalAlignment="Bottom" FontFamily="Times New Roman" FontSize="25" Grid.Column="1" HorizontalAlignment="Stretch" Background="#FFFAF9F9" Margin="10,0,10,10"/>
 
-        <Button x:Name="calculateButton" Grid.Column="3" Content="Calculate Currency" Grid.Row="7" HorizontalAlignment="Stretch" FontFamily="Times New Roman" FontSize="25" Background="#FFBEE3DB" Click="calculateButton_Click"/>
+		<Button x:Name="calculateButton" Grid.Column="3" Content="Calculate Currency" Grid.Row="7" HorizontalAlignment="Stretch" FontFamily="Times New Roman" FontSize="25" Background="#FFFAF9F9" Click="calculateButton_Click"/>
 
-        <Button x:Name="exitButton" Grid.Column="3" Content="Exit" Grid.Row="8" HorizontalAlignment="Stretch" VerticalAlignment="Top" FontFamily="Times New Roman" FontSize="25" Background="#FFBEE3DB" Click="exitButton_Click"/>
+		<Button x:Name="exitButton" Grid.Column="3" Content="Exit" Grid.Row="8" HorizontalAlignment="Stretch" VerticalAlignment="Top" FontFamily="Times New Roman" FontSize="25" Background="#FFFAF9F9" Click="exitButton_Click"/>
 
         <ComboBox x:Name="CurrencyFrom" Grid.Column="3" HorizontalAlignment="Stretch" Grid.Row="2" VerticalAlignment="Bottom" FontFamily="Times New Roman" FontSize="25" Margin="10,0,10,10" >
 
