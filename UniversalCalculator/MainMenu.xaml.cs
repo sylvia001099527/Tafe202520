@@ -41,5 +41,10 @@ namespace Calculator
 		{
 			Frame.Navigate(typeof(MortgageCalculator));
 		}
-	}
+
+		private void Exit_Click(object sender, RoutedEventArgs e)
+		{
+			Application.Current.Exit();
+		}
+    }
 }

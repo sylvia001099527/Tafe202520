@@ -42,7 +42,7 @@
 			
 			<Button x:Name="CurrencyCalculator" Margin="10" Background="#faf9f9" Content="Currency Calculator" FontSize="14" FontFamily="Times New Roman" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="CurrencyCalculator_Click"/>
 
-			<Button x:Name="Exit" Margin="10" Background="#faf9f9" Content="Exit" FontSize="14" FontFamily="Times New Roman" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+			<Button x:Name="Exit" Margin="10" Background="#faf9f9" Content="Exit" FontSize="14" FontFamily="Times New Roman" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="Exit_Click"/>
 
         </StackPanel>
         <!--column right, image-->
