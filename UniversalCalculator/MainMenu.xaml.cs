@@ -32,11 +32,14 @@ namespace Calculator
 			Frame.Navigate(typeof(MainPage));
 		}
 
+<<<<<<< HEAD
 		private void CurrencyCalculator_Click(object sender, RoutedEventArgs e)
 		{
 			Frame.Navigate(typeof(CurrencyCalc));
 		}
 
+=======
+>>>>>>> remotes/origin/feature_mortgage_calc
 		private void MortgageCalculator_Click(object sender, RoutedEventArgs e)
 		{
 			Frame.Navigate(typeof(MortgageCalculator));
