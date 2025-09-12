@@ -31,7 +31,7 @@
         <!--column middle, main menu-->
         <StackPanel Grid.Column="1" Background="#bee3db" x:Name="mainMenuPanel" FocusVisualPrimaryBrush="#FFFFD6BA">
 
-            <TextBlock x:Name="UniversalCalculator" Margin="10,40,10,10" Text="Universal Calculator" FontFamily="Times New Roman" FontSize="16" FontWeight="Bold" TextAlignment="Center" RenderTransformOrigin="0.5,0.5">
+            <TextBlock x:Name="UniversalCalculator" Margin="10,20,10,10" Text="Universal Calculator" FontFamily="Times New Roman" FontSize="16" FontWeight="Bold" TextAlignment="Center" RenderTransformOrigin="0.5,0.5">
                 <TextBlock.RenderTransform>
                     <CompositeTransform TranslateX="0" TranslateY="5"/>
                 </TextBlock.RenderTransform>
@@ -41,6 +41,8 @@
 			<Button x:Name="MortgageCalculator" Margin="10" Background="#faf9f9" Content="Mortgage Calculator" FontSize="14" FontFamily="Times New Roman" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="MortgageCalculator_Click"/>
 			
 			<Button x:Name="CurrencyCalculator" Margin="10" Background="#faf9f9" Content="Currency Calculator" FontSize="14" FontFamily="Times New Roman" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="CurrencyCalculator_Click"/>
+
+			<Button x:Name="TripCalculator" Margin="10" Background="#faf9f9" Content="Trip Calculator" FontSize="14" FontFamily="Times New Roman" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="TripCalculator_Click"/>
 
 			<Button x:Name="Exit" Margin="10" Background="#faf9f9" Content="Exit" FontSize="14" FontFamily="Times New Roman" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="Exit_Click"/>
 
