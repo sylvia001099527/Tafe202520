@@ -46,5 +46,10 @@ namespace Calculator
 		{
 			Application.Current.Exit();
 		}
+
+		private void TripCalculator_Click(object sender, RoutedEventArgs e)
+		{
+			// Trip calculator C# code will be developed later
+        }
     }
 }
